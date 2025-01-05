@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative; /* For overlay effect */
+}
+
+header img {
+    width: 200px;
+    height: auto;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 128, 0.1); /* Semi-transparent teal overlay */
+    z-index: -1; /* Place overlay behind logo */
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e0ffff; /* Lighter shade of blue */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #006666; /* Dark teal for text */
+    padding: 10px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+    color: #008080; /* Darker teal on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    background-color: #e0ffff; /* Use the same light blue as nav */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #008080; /* Teal for footer */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
